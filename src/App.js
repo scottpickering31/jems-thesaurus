@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { ThesaurusApi } from "./ThesaurusApi";
+import UserInput from "./UserInput";
+import OutputBox from "./OutputBox";
 
 function App() {
+  const [synonyms, setSynonyms] = useState([]);
+  const [input, setInput] = useState("");
+
+  useEffect(() => {
+    // You can make the API call here if needed.
+  }, []);
+
+  const handleInputChange = (inputValue) => {
+    setInput(inputValue);
+    ThesaurusApi(inputValue, setSynonyms);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="titles">
+        <h2>Jem's</h2>
+        <h1>Thesaurus</h1>
+      </div>
+      <div className="input-box-container">
+        <UserInput onInputChange={handleInputChange} />
+      </div>
+      <OutputBox synonyms={synonyms} />
+    </>
   );
 }
 
