@@ -4,11 +4,14 @@ import "./App.css";
 function OutputBox({ synonyms }) {
   return (
     <div className="output-box-container">
-      <input
+      <textarea
         className="output-box"
         type="text"
-        value={synonyms.map((synonymArray) => synonymArray[0]).join(", ")}
-      ></input>
+        placeholder="Your text will be generated here:"
+        value={synonyms
+          .map((synonymArray) => synonymArray[0].toUpperCase())
+          .join(", ")}
+      ></textarea>
     </div>
   );
 }

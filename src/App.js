@@ -20,8 +20,8 @@ function App() {
   return (
     <>
       <div className="titles">
-        <h2>Jem's</h2>
-        <h1>Thesaurus</h1>
+        <h2>JEM'S</h2>
+        <h1>THESAURUS</h1>
       </div>
       <div className="input-box-container">
         <UserInput onInputChange={handleInputChange} />
