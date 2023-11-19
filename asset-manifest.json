@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jems-thesaurus/static/css/main.2598d895.css",
+    "main.js": "/jems-thesaurus/static/js/main.8f98d19d.js",
+    "index.html": "/jems-thesaurus/index.html",
+    "main.2598d895.css.map": "/jems-thesaurus/static/css/main.2598d895.css.map",
+    "main.8f98d19d.js.map": "/jems-thesaurus/static/js/main.8f98d19d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2598d895.css",
+    "static/js/main.8f98d19d.js"
+  ]
+}
